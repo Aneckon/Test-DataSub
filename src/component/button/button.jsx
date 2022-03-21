@@ -4,7 +4,7 @@ import { Button } from 'antd';
 
 export const FormBtn = ({ handleDateSubmit, buttonActive }) => {
   return (
-    <Button onClick={handleDateSubmit} disabled={!buttonActive}>
+    <Button htmlType="submit" onClick={handleDateSubmit} disabled={!buttonActive}>
       оплатить
     </Button>
   );

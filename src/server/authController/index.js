@@ -8,7 +8,9 @@ class authController {
       await user.save();
       return res.json({ message: 'Успешно отправлен запрос' });
     } catch (e) {
-      console.log(e);
+      return res.status(400).json({
+        error: e.toString(),
+      });
     }
   }
 }

@@ -9,6 +9,7 @@ import { Form, DatePicker, Col, Row } from 'antd';
 
 export const App = () => {
   const [buttonActive, setButtonActive] = useState(false);
+
   const [cardNumber, setCardNumber] = useState('');
   const [datePicker, setDatePicker] = useState('');
   const [cvv, setCvv] = useState('');
@@ -17,6 +18,8 @@ export const App = () => {
   useEffect(() => {
     if (cardNumber.length && datePicker.length && cvv.length && amount.length) {
       setButtonActive(true);
+    } else {
+      setButtonActive(false);
     }
   }, [cardNumber, datePicker, cvv, amount]);
 

@@ -6,11 +6,11 @@ const auth = require('./router');
 const PORT = 8000;
 
 const url =
-  'mongodb+srv://Anecko:anan4285@cluster0.8gyd9.mongodb.net/Cluster0?retryWrites=true&w=majority';
+  'mongodb+srv://Anecko:424285@cluster0.8gyd9.mongodb.net/Cluster0?retryWrites=true&w=majority';
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3000', credential: true }));
+app.use(cors({ credential: true }));
 app.use(express.json());
 app.use('/', auth);
 

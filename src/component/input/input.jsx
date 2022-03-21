@@ -7,6 +7,7 @@ export const Input = ({ mask, placeholder, setInputChange, inputValue }) => {
     <InputMask
       className="ant-input"
       mask={mask}
+      require="true"
       placeholder={placeholder}
       value={inputValue}
       onChange={(e) => setInputChange(e.target.value)}
